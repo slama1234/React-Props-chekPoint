@@ -1,30 +1,19 @@
+import logo from './logo.svg';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import myImg from './profile.jpg'
-import Profile from './Components/Profile';
+import Profile from './Components/Profile'
+import myimg from './profile.jpg'
 
 function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
 
-
-      const Listprof = [
-    {
-      fullName: 'Mustapha Slama',
-      bio: "im just trying something new here so don't be judgemenatl !",
-      profession:"gangster",
-      },
-      
-];
-const displayName=(name)=>{
-  alert(`the profile name is ${name}`)
-}
-return (
-  <>
-  <Profile Listprof={Listprof} displayName={displayName}>
-     {myImg}
-  </Profile>
-  </>
-);
-  
+        <Profile name="Mustapha Slama"  profission="Web Developer Student">
+        <img src={logo} alt="Profile image" width={200} height={200} />
+        </Profile>
+      </header>
+    </div>
+  );
 }
 
 export default App;
